@@ -1,0 +1,16 @@
+const correctEmail = 'ainur@gmail.com';
+const correctPassword = '123';
+
+const messageContainer = document.getElementById('message-container');
+
+function cekLogin(){
+    const userEmail = document.getElementById('fEmail').value;
+    const userPassword = document.getElementById('fPassword').value;
+
+    if(userEmail != correctEmail || userPassword != correctPassword){
+        messageContainer.innerHTML = "<p class='error-message'>Login Gagal, Email atau Password salah !</p>";
+    } else {
+        messageContainer.innerHTML = "<p class='success-message'>Login Berhasil...</p>";
+    }
+    //alert(userPassword);
+}
